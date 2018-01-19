@@ -12,6 +12,7 @@
     <style>
         body   {
             background-image: url(https://img14.deviantart.net/e145/i/2012/340/6/f/be_happy_by_shadowrising-d5n9rak.jpg);
+            color: blue;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -215,22 +216,22 @@
     <script>
 
         $(document).ready(function() {
-        $('select').material_select();
-        $('#submit').on("click", function(){
+        $("select").material_select();
+        $("#submit").on("click", function(){
             
             var validEntry;
-            if($("#user_name").val().trim() === ''){
-                alert('Please enter a name');
+            if($("#user_name").val().trim() === ""){
+                alert("Please enter a name");
             }
-            else if($("#photo").val().trim() === ''){
-                alert('Please enter a link to photo');
+            else if($("#photo").val().trim() === ""){
+                alert("Please enter a link to photo");
             }
             else{
                 
                 var answerArray = [];
                 
                 for ( i = 1; i < 11; i++){
-                    answerArray.push(parseInt($('#quest' + i).val().substring(0,1)));
+                    answerArray.push(parseInt($("#quest" + i).val().substring(0,1)));
                 }
                 
                 var newFriend = 
@@ -272,13 +273,13 @@
                         
                     }
                     
-                    var friendName = '<h4>' + bestFriend.name + '<h4>';
-                    var friendPic = '<img width="300px" src=' + bestFriend.photo + '>';
+                    var friendName = "<h4>" + bestFriend.name + "<h4>";
+                    var friendPic = "<img width="300px" src=" + bestFriend.photo + ">";
                     
-                    $('#friend-modal').modal('show');
-                    $('#friend-modal h4').html(friendName);
-                    $('.modal-body').html(friendPic);
-                    $('#survey')[0].reset();
+                    $("#friend-modal").modal("show");
+                    $("#friend-modal h4").html(friendName);
+                    $(".modal-body").html(friendPic);
+                    $("#survey")[0].reset();
                     
                 });
             }
