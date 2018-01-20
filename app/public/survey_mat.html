@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <title>FriendFinder Survey</title>
+    <style>
+        body   {
+            background-image: url(https://img14.deviantart.net/e145/i/2012/340/6/f/be_happy_by_shadowrising-d5n9rak.jpg);
+            color: blue;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper blue accent-2">
+            <a href="#" class="brand-logo center"><i class="material-icons">group_add</i>FastFriendFinder</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/"><i class="material-icons left">home</i> Home</a></li>
+                <li class="active"><a href="#"><i class="material-icons left">library_books</i> Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h4>The Survey</h4>
+                <hr>
+                <form role="form" id="survey">
+                    <h5>Your name and photo</h5>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input placeholder="Your name" id="user_name" type="text" class="validate">
+                        <label for="user_name">Your Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">add_a_photo</i>
+                        <input placeholder="URL to your photo" id="photo" type="text" class="validate">
+                        <label for="photo">Photo URL (required):</label>
+                    </div>
+                    <hr>
+                    <h5>Please keep a straight face and do NOT hum the national anthem while choosing how strongly you agree with the following statements:</h5>
+        
+                    <div class="row col s12">
+                        <h4>Question 1</h4>
+                        <h5>I often take advice from my closest friends.</h5>
+                        <div class="input-field col s12">
+                            <select id="quest1">
+                                <option value="1">1 (strongly agree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (strongly disagree)</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 2</h4>
+                        <h5>I like my steak more well done than a little pink inside.</h5>
+                        <div class="input-field col s12">
+                            <select id="quest2">
+                                <option value="1">1 (strongly agree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (strongly disagree)</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 3</h4>
+                        <h5>Kanye West is a much better artist than Taylor Swift.</h5>
+                        <div class="input-field col s12">
+                                <select id="quest3">
+                                    <option value="1">1 (strongly agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (strongly disagree)</option>
+                                </select>
+                            </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 4</h4>
+                        <h5>When going out to eat, I tend to prefer "local favorites" over chain restaurants.</h5>
+                        <div class="input-field col s12">
+                                <select id="quest4">
+                                    <option value="1">1 (strongly agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (strongly disagree)</option>
+                                </select>
+                            </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 5</h4>
+                        <h5>Most hipsters are not ironic enough for me.</h5>
+                        <div class="input-field col s12">
+                                <select id="quest5">
+                                    <option value="1">1 (strongly agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (strongly disagree)</option>
+                                </select>
+                            </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 6</h4>
+                        <h5>I am being investigated by Robert Mueller for collusion with Russia during the 2016 election.</h5>
+                        <div class="input-field col s12">
+                                <select id="quest6">
+                                    <option value="1">1 (strongly agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (strongly disagree)</option>
+                                </select>
+                            </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 7</h4>
+                        <h5>I see stupid people... they're all around us but they don't know they're stupid.</h5>
+                        <div class="input-field col s12">
+                                <select id="quest7">
+                                    <option value="1">1 (strongly agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (strongly disagree)</option>
+                                </select>
+                            </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 8</h4>
+                        <h5>I enjoy engaging in a variety of physical activities.</h5>
+                        <div class="input-field col s12">
+                                <select id="quest8">
+                                    <option value="1">1 (strongly agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (strongly disagree)</option>
+                                </select>
+                            </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 9</h4>
+                        <h5>On my days off from work or school I rarely get out of bed before the crack of noon.</h5>
+                        <div class="input-field col s12">
+                                <select id="quest9">
+                                    <option value="1">1 (strongly agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (strongly disagree)</option>
+                                </select>
+                            </div>
+                    </div>
+        
+                    <div class="row col s12">
+                        <h4>Question 10</h4>
+                        <h5>I have uncontrollable urges to commit minor traffic offenses.</h5>
+                        <div class="input-field col s12">
+                                <select id="quest10">
+                                    <option value="1">1 (strongly agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (strongly disagree)</option>
+                                </select>
+                            </div>
+                    </div>
+                    
+                    <button class="btn waves-effect waves-light" type="submit" name="submit" id="submit">Submit
+                        <i class="material-icons right">cloud</i>
+                    </button>
+            
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="friend-modal" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+                    </div>
+            </div>
+    </div>
+
+    <script>
+
+        $(document).ready(function() {
+        $("select").material_select();
+        $("#submit").on("click", function(){
+            
+            var validEntry;
+            if($("#user_name").val().trim() === ""){
+                alert("Please enter a name");
+            }
+            else if($("#photo").val().trim() === ""){
+                alert("Please enter a link to photo");
+            }
+            else{
+                
+                var answerArray = [];
+                
+                for ( i = 1; i < 11; i++){
+                    answerArray.push(parseInt($("#quest" + i).val().substring(0,1)));
+                }
+                
+                var newFriend = 
+                {
+                    name: $("#user_name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: answerArray
+                };
+                
+                var currentURL = window.location.origin;
+                
+                $.post(currentURL + "/api/friends", newFriend,
+                function(data){});
+                
+                $.ajax({url: currentURL + "/api/friends", method: "GET"}).done(function(res){
+                        
+                    var bestFriend;
+                    var currentBest = 100;
+                    var differenceArray = [];
+                    
+                    for(i=0; i < res.length - 1; i++){
+                        
+                        for(j=0; j<10; j++){
+                            var currentDifference = newFriend.scores[j] - res[i].scores[j];
+                            differenceArray.push(Math.abs(currentDifference));
+                        }
+                        
+                        var difference = differenceArray.reduce(add, 0);
+                        
+                        if(difference < currentBest){
+                            bestFriend = res[i];
+                            currentBest = difference;
+                            differenceArray = [];
+                        }
+                        
+                        else{
+                            differenceArray =[];
+                        }
+                        
+                    }
+                    
+                    var friendName = "<h4>" + bestFriend.name + "<h4>";
+                    var friendPic = "<img width="300px" src=" + bestFriend.photo + ">";
+                    
+                    $("#friend-modal").modal("show");
+                    $("#friend-modal h4").html(friendName);
+                    $(".modal-body").html(friendPic);
+                    $("#survey")[0].reset();
+                    
+                });
+            }
+    return false;
+    });
+    function add(a, b){
+        return a+b;
+    };
+    })
+    </script>
+</body>
+</html>
